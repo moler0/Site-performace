@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato | Performance Eventos Corporativos</title>
+    <meta name="description" content="Solicite um orçamento ou a visita de um representante." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Estilos do site (arquivo style.css, o mesmo em todas as páginas) -->
+    <link rel="stylesheet" href="style.css" />
+  </head> 
+  <body>
+    <!-- PÁGINA: Contato | Placeholders [entre colchetes] = conteúdo que ainda falta receber do cliente -->
+    <!-- CABEÇALHO: logo, menu de navegação e botão de orçamento (igual em todas as páginas) -->
+    <header>
+      <div class="w bar">
+        <a class="logo" href="index.html"
+          ><strong>Performance</strong><span>EVENTOS CORPORATIVOS</span></a
+        >
+        <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          &#9776;
+        </button>
+        <!-- MENU: o JS marca o link da página atual com aria-current -->
+        <nav id="menu" aria-label="Principal">
+          <a href="index.html">Início</a><a href="quem-somos.html">Quem somos</a
+          ><a href="solucoes.html">Soluções</a><a href="temas-sipat.html">Temas SIPAT</a
+          ><a href="clientes.html">Clientes</a><a href="contato.html">Contato</a>
+        </nav>
+          <a class="btn btn-or" href="https://wa.me/5511952102326?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento">Pedir orçamento</a>      
+</div>
+    </header>
+    <!-- CONTEÚDO PRINCIPAL: muda de página para página -->
+    <main>
+      <!-- SEÇÃO: Fale conosco (classe: page-head) -->
+      <section class="page-head">
+        <div class="w">
+          <h1>Fale <b>conosco</b></h1>
+          <p>Receba a visita de um dos nossos representantes na sua empresa.</p>
+        </div>
+      </section>
+      <!-- SEÇÃO: Outras formas de contato -->
+      <section>
+        <div class="w sec">
+          <h2 class="t">Outras formas de <b>contato</b></h2>
+          <div class="grid" style="margin-top: 32px">
+            <article class="card">
+              <h3>WhatsApp</h3>
+              <p><h5>(11) 95210-2326</h5></p>
+            </article>
+            <article class="card">
+              <h3>E-mail</h3>
+              <p><h5>comercial@performanceeventos.com</h5></p>
+            </article>
+            <article class="card">
+              <h3>Redes sociais</h3>
+              <p>[Instagram / LinkedIn / YouTube]</p>
+            </article>
+          </div>
+          <div class="ph" style="height: 260px; margin-top: 24px">[MAPA: Google Maps]</div>
+        </div>
+      </section>
+    </main>
+
+     <a
+      class="zap"
+      href="https://wa.me/5511952102326?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar pelo WhatsApp">
+          <img src="/fotosperformace/10000484.png" alt="" width="32" height="32" />
+        </a>
+    <!-- RODAPÉ (igual em todas as páginas) -->
+    <footer>
+      <div class="w">
+        <strong>Performance <span>Eventos Corporativos</span></strong
+        ><small
+          >© <span id="ano"></span> Performance Eventos Corporativos. Todos os direitos
+          reservados.</small
+        >
+      </div>
+    </footer>
+    <!-- Comportamento do site (arquivo script.js, o mesmo em todas as páginas) -->
+    <script src="script.js"></script>
+  </body>
+</html>
