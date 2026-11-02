@@ -265,6 +265,39 @@ nav a.ativo {
   font-size: 14px;
 }
 
+/* ===== CARTÕES COM FOTO AO FUNDO
+   Foto à direita, esmaecendo para branco do lado do texto. */
+.card.foto {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image:
+    linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.2) 100%), /* branco por cima */
+    var(--foto); /* foto por baixo */
+  background-size: cover;
+  background-position: right center; /* a pessoa da foto fica à direita */
+  background-repeat: no-repeat;
+}
+.card.foto p {
+  max-width: 60%; /* o texto não invade a parte da foto */
+}
+.card.foto .more {
+  margin-top: auto; /* empurra o botão para a base do cartão */
+}
+
+/* Celular: o cartão é estreito, então o branco cobre quase tudo para o texto continuar legível */
+@media (max-width: 600px) {
+  .card.foto {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+      var(--foto);
+  }
+  .card.foto p {
+    max-width: 100%;
+  }
+}
+
 /* ===== SEÇÕES COM FUNDO DIFERENTE
    .alt = cinza-claro | .temas = azul-marinho. */
 .alt {
