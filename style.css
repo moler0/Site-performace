@@ -266,18 +266,21 @@ nav a.ativo {
 }
 /* ===== LOGO NA PÁGINA DE CONTATO (mesmo tamanho que o mapa tinha) */
 .contato-logo {
-  height: 260px; /* mesma altura do mapa */
-  margin-top: 24px; /* mesmo espaço acima */
-  padding: 24px;
+  height: 160px; /* altura da caixa: diminua ou aumente este número */
+  margin-top: 24px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  min-width: 0; /* deixa a caixa encolher dentro do grid, em vez de empurrar a tela */
+  overflow: hidden; /* nada passa da borda da caixa */
 }
 .contato-logo img {
-  max-width: 100%;
-  max-height: 100%; /* nunca passa da altura da caixa */
-  object-fit: contain; /* mostra o logo inteiro, sem cortar nem esticar */
+  width: auto;
+  height: auto;
+  max-width: 100%; /* nunca mais largo que a caixa */
+  max-height: 100%; /* nunca mais alto que a caixa */
+  object-fit: contain; /* mostra o logo inteiro, sem cortar */
 }
 
 /* ===== CARTÕES COM FOTO AO FUNDO
