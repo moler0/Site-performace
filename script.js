@@ -29,3 +29,14 @@ nav.querySelectorAll('a').forEach((a) => {
 /* ---------- 4. ANO DO RODAPÉ ---------- */
 // Assim o "©" nunca fica desatualizado
 document.getElementById('ano').textContent = new Date().getFullYear();
+/* ---------- ESTEIRA DE LOGOS (só existe em clientes.html) ---------- */
+const trilho = document.querySelector('.esteira-trilho');
+
+if (trilho) {
+  // Cria uma cópia de cada logo no fim da fila; o CSS anda até a metade e recomeça
+  [...trilho.children].forEach((item) => {
+    const copia = item.cloneNode(true);
+    copia.setAttribute('aria-hidden', 'true'); // leitor de tela não lê o logo duas vezes
+    trilho.appendChild(copia);
+  });
+}

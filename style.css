@@ -353,7 +353,7 @@ nav a.ativo {
 .logos {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 .logos .ph {
   height: 80px;
@@ -364,6 +364,70 @@ nav a.ativo {
 }
 .dep p + p {
   font-weight: 600;
+}
+/* ===== LOGOS DOS CLIENTES
+
+/* ===== LOGOS DOS CLIENTES
+   Caixa branca; o logo aparece inteiro, sem corte. */
+.logo-cliente {
+  height: 120px; /* altura da caixa: aumente se quiser logos maiores */
+  padding: 25px; /* respiro entre o logo e a borda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #dce4ef;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #3b4c68;
+}
+.logo-cliente img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* mostra o logo inteiro, sem cortar */
+}
+
+   /*Caixa branca; o logo aparece inteiro, sem corte. */
+/* ===== ESTEIRA DE LOGOS (rolagem automática) */
+.esteira {
+  margin-top: 32px;
+  overflow: hidden; /* esconde o que está fora da área visível */
+  /* esmaece as bordas para os logos entrarem e saírem suavemente */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.esteira-trilho {
+  display: flex;
+  width: max-content; /* a faixa tem a largura de todos os logos juntos */
+  animation: esteira 40s linear infinite; /* 40s = tempo de uma volta completa */
+}
+/* Pausa só em aparelhos com mouse de verdade (no celular o toque "gruda" o hover) */
+@media (hover: hover) {
+  .esteira:hover .esteira-trilho {
+    animation-play-state: paused;
+  }
+}
+
+.esteira .logo-cliente {
+  flex: 0 0 200px; /* largura fixa de cada caixa */
+  margin-right: 16px; /* margem, e não "gap", para o loop fechar certinho */
+}
+@keyframes esteira {
+  to {
+    transform: translateX(-50%); /* anda até a metade, onde a cópia começa */
+  }
+}
+
+/* Quem desativa animações no aparelho recebe uma faixa rolável, sem movimento */
+@media (prefers-reduced-motion: reduce) {
+  .esteira {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .esteira-trilho {
+    animation: none;
+  }
 }
 /* ===== CONTATO E FORMULÁRIO */
 
