@@ -265,24 +265,23 @@ nav a.ativo {
   font-size: 14px;
 }
 /* ===== LOGO NA PÁGINA DE CONTATO (mesmo tamanho que o mapa tinha) */
+/* ===== LOGO NA PÁGINA DE CONTATO */
 .contato-logo {
-  height: 160px; /* altura da caixa: diminua ou aumente este número */
   margin-top: 24px;
   padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 0; /* deixa a caixa encolher dentro do grid, em vez de empurrar a tela */
+  min-width: 0; /* deixa a caixa encolher dentro do grid */
   overflow: hidden; /* nada passa da borda da caixa */
 }
 .contato-logo img {
   width: auto;
   height: auto;
   max-width: 100%; /* nunca mais largo que a caixa */
-  max-height: 100%; /* nunca mais alto que a caixa */
-  object-fit: contain; /* mostra o logo inteiro, sem cortar */
+  max-height: 128px; /* altura máxima do logo: mude este número para aumentar ou diminuir */
+  object-fit: contain;
 }
-
 /* ===== CARTÕES COM FOTO AO FUNDO
    Foto à direita, esmaecendo para branco do lado do texto. */
 .card.foto {
