@@ -52,7 +52,8 @@ a {
   padding: 0 32px;
 }
 .sec {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .grid {
   display: grid;
@@ -229,7 +230,8 @@ nav a.ativo {
   color: #fff;
 }
 .hero .sec {
-  padding: 120px 0; /* capa mais alta, para a foto aparecer mais */
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .hero .eyebrow {
   color: var(--or);
@@ -504,8 +506,9 @@ footer small {
     font-size: 38px;
   }
   .sec {
-    padding: 56px 0;
-  }
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
   .menu-btn {
     display: block;
   }
