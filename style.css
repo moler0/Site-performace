@@ -187,6 +187,11 @@ header {
   font-size: 32px;
   font-weight: 800;
 }
+.logo img {
+  display: block;
+  height: 90px; /* altura do logo no cabeçalho */
+  width: auto;
+}
 .logo span {
   font-size: 11px;
   letter-spacing: 0.2em;
@@ -595,7 +600,7 @@ nav a[aria-current="page"] {
   color: var(--navy);
 }
 /* Ajustes para telas pequenas (celular e tablet) */
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .page-head h1 {
     font-size: 44px;
   }
