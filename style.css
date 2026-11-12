@@ -189,7 +189,7 @@ header {
 }
 .logo img {
   display: block;
-  height: 90px; /* altura do logo no cabeçalho */
+  height: 85px; /* altura do logo no cabeçalho */ 
   width: auto;
 }
 .logo span {
