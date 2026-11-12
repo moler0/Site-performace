@@ -503,6 +503,7 @@ footer small {
 @media (max-width: 860px) {
   .hero h1 {
     font-size: 56px;
+    height: 85px;
   }
   .t {
     font-size: 38px;
